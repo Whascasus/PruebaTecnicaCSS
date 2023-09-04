@@ -1,0 +1,107 @@
+<div class="custom-container">
+  <div class="title">
+    <h1 mat-dialog-title>{{tituloAccion}} DOCENTE</h1>
+  </div>
+    <form [formGroup]="formProfesores">
+
+        <mat-grid-list cols="4" rowHeight="150px">
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Tipo Documento</mat-label>
+                    <mat-select formControlName="TipoIdentificacion" autocomplete="off">
+                      <mat-option [value]="1">C.C</mat-option>
+                      <mat-option [value]="2">C.E</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Identificacion</mat-label>
+                    <input matInput formControlName="Identificacion" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Nombres</mat-label>
+                    <input matInput formControlName="Nombres" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Apellidos</mat-label>
+                    <input matInput formControlName="Apellidos" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Correo Electronico</mat-label>
+                    <input [ngClass]="{'class-when-true': formProfesores.get('CorreoElectronico')?.invalid && formProfesores.get('CorreoElectronico')?.touched}"
+                            type="email" matInput placeholder="Docentet@example.com" formControlName="CorreoElectronico" autocomplete="off">
+                            <small *ngIf="formProfesores.get('CorreoElectronico')?.errors?.['pattern']" class="text-danger" [ngStyle]="{'color': '#ee2b7a'}">Ingrese un Correo Válido</small>
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Telefono Celular</mat-label>
+                    <input matInput formControlName="TelefonoCelular" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Numero Contrato</mat-label>
+                    <input matInput formControlName="NumeroContrato" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label [ngStyle]="{'color': '#ee2b7a'}">Ciudad Residencia</mat-label>
+                    <input matInput formControlName="CiudadResidencia" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="2" rowHeight="150px">
+
+          <mat-grid-tile>
+            <mat-form-field class="half-width">
+                <mat-label [ngStyle]="{'color': '#ee2b7a'}">Escalafon Tecnico</mat-label>
+                <mat-select formControlName="EscalafonTecnico">
+                  <mat-option [value]="1">Tecnico</mat-option>
+                  <mat-option [value]="2">Tecnologo</mat-option>
+                  <mat-option [value]="3">Profesional</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="half-width">
+                <mat-label [ngStyle]="{'color': '#ee2b7a'}">Escalafon Extencion</mat-label>
+                <mat-select formControlName="EscalafonExtension">
+                  <mat-option [value]="1">Técnico experiencia inferior 1 año</mat-option>
+                  <mat-option [value]="2">Técnico experiencia superior 1 año</mat-option>
+                  <mat-option [value]="3">Tecnologo</mat-option>
+                  <mat-option [value]="4">Profesional</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </mat-grid-tile>
+
+        </mat-grid-list>
+
+    </form>
+
+    <div mat-dialog-actions class="custom-button-container">
+        <button mat-raised-button [ngStyle]="{'margin-right': '50px'}" color="warn" (click)="Home()">Volver</button>
+
+        <button mat-raised-button color="primary" (click)="addEditProfesor()" 
+        [disabled]="formProfesores.invalid"> {{botonAccion}} </button>
+    </div>
+
+
+</div>

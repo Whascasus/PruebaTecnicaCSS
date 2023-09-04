@@ -1,0 +1,29 @@
+<div class="center-container">
+  <div class="form-box">
+
+    <img src="./assets/img/CESDE.jpg" alt="Logo" class="logo">
+
+      <form [formGroup]="formLogin">
+
+        <mat-grid-list cols="1" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label [ngStyle]="{'color': '#ee2b7a'}">Identificacion</mat-label>
+              <input matInput formControlName="Usuario" autocomplete="off">
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label [ngStyle]="{'color': '#ee2b7a'}">Contraseña</mat-label>
+              <input matInput formControlName="Contrasena" type="password" autocomplete="off">
+            </mat-form-field>
+          </mat-grid-tile>
+          
+        </mat-grid-list> 
+        <div mat-dialog-actions>
+          <button mat-raised-button color="primary" (click)="login()" [disabled]="formLogin.invalid">Ingresar</button>
+        </div>
+      </form>
+  </div>
+</div>
