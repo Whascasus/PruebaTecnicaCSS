@@ -3,7 +3,7 @@ Prueba Tecnica para la empresa CSS, con .NET6, Angular 16 y SQL
 
 Buenos dias, soy Esteban Tabares Cañas
 
-El desarrollo del proyecto fue interesante y un tanto retador pues tengo poca experiencia, de antemano me disculpo si no cumplo con todas las expectativas, 
+El desarrollo del proyecto fue interesante y un tanto retador pues tengo poca experiencia tengo mucho por mejorar, de antemano me disculpo si no cumplo con todas las expectativas, 
 pues no puede cumplir con todas las peticiones de la prueba.
 
 No pude solucionar unos errores pero en general el proyecto es funcional, con su respectivo login, pagina principal de docentes, crear y editarlos.
@@ -22,7 +22,7 @@ pero no puse una alerta señalando dicho tema, por lo que solo sale como que no 
 
 Esos serian los problemas que no solucione del proyecto, pero de igual manera lo demas esta funcionando de forma correcta.
 
-Igualmente gracias por la oportunidad de poder presentar la prueba, gracias.
+Igualmente gracias por la oportunidad de poder presentar la prueba.
 
 Finalmente en la carpeta se encuentra el archivo SQL con las tablas y un registro para cada tabla, 
 
