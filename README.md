@@ -28,5 +28,6 @@ Finalmente en la carpeta se encuentra el archivo SQL con las tablas y un registr
 
 recordar que se debe cambiar el nombre del servidor en la cadena de conexion para que funcione la conexion, el archivo se encuentra en la siguiente ruta: 
 PruebaTecnica\Back-End\PruebaTecnica\PruebaTecnica\appsettings.json
+El usuario y contraseña para iniciar sesion que deje en el SQL es Usuario:whascasus, Contraseña:Whascasus2023
 
 Nuevamente gracias por la oportunidad.
